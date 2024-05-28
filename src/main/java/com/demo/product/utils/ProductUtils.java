@@ -4,6 +4,10 @@ package com.demo.product.utils;
 import com.demo.product.models.request.ProductRequest;
 
 public class ProductUtils {
+    private ProductUtils() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
+
     public static ProductRequest createSampleProductRequest(int index) {
         ProductRequest productRequest = new ProductRequest();
         productRequest.setProductCode("PRODUCT_000" + index);
